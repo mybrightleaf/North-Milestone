@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N&amp;M Latam Consulting | Visión Estratégica. Logros Concretos.</title>
+<meta name="description" content="N&M Latam Consulting — Consultoría estratégica, técnica y regulatoria para el sector salud y farmacéutico en Latinoamérica. Más de 25 años de experiencia.">
+<meta property="og:title" content="N&M Latam Consulting — North & Milestone">
+<meta property="og:description" content="Visión estratégica. Logros concretos. Consultoría integral para la industria de la salud en Latinoamérica.">
+<meta property="og:type" content="website">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRE3DWM702"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KRE3DWM702');
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; } /* mobile-first base */
+  @media (min-width: 768px) { html { font-size: 20px; } } /* +25% solo en desktop */
+
+  :root {
+    --navy:       #1a3461;
+    --navy-dark:  #0d1f3c;
+    --navy-mid:   #1e3d73;
+    --navy-light: #2a5298;
+    --sky:        #e8eef8;
+    --sky-mid:    #d0ddf0;
+  }
+
+  body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #fff; }
+  h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+  /* ── Hero ── */
+  .hero-bg {
+    background:
+      linear-gradient(135deg, rgba(13,31,60,0.93) 0%, rgba(26,52,97,0.80) 100%),
+      url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920')
+      no-repeat center center / cover;
+  }
+
+  .section-padding { padding: 3.5rem 1.25rem; }
+  @media (min-width: 768px) { .section-padding { padding: 5rem 1.5rem; } }
+
+  /* ── Nav ── */
+  .nav-link { position: relative; transition: color .3s; color: #4a5568; }
+  .nav-link::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 2px; background: var(--navy); transition: width .3s;
+  }
+  .nav-link:hover { color: var(--navy); }
+  .nav-link:hover::after { width: 100%; }
+
+  /* ── Buttons ── */
+  .btn-navy {
+    display: inline-block; background: var(--navy); color: #fff;
+    padding: .9rem 2.4rem; letter-spacing: .1em; font-size: .72rem;
+    font-weight: 600; text-transform: uppercase; border-radius: 2px;
+    transition: background .3s;
+  }
+  .btn-navy:hover { background: var(--navy-light); }
+
+  .btn-outline-white {
+    display: inline-block; border: 1px solid rgba(255,255,255,.4); color: #fff;
+    padding: .9rem 2.2rem; letter-spacing: .1em; font-size: .72rem;
+    font-weight: 500; text-transform: uppercase; transition: background .3s, border-color .3s;
+  }
+  .btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.7); }
+
+  /* ── Service cards ── */
+  .service-card {
+    background: #fff; border: 1px solid #e2e8f0;
+    border-top: 3px solid var(--navy); padding: 2.5rem;
+    transition: box-shadow .35s, transform .35s;
+  }
+  .service-card:hover { box-shadow: 0 20px 60px rgba(26,52,97,.12); transform: translateY(-4px); }
+  .service-card .card-number {
+    color: #dce8f5; font-size: 3rem; font-weight: 300; line-height: 1;
+    margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; transition: color .3s;
+  }
+  .service-card:hover .card-number { color: var(--navy); }
+
+  /* ── Dividers ── */
+  .divider       { width: 40px; height: 3px; background: var(--navy); margin-bottom: 1.5rem; }
+  .divider-white { width: 40px; height: 2px; background: #fff; margin-bottom: 1.5rem; opacity: .35; }
+
+  /* ── Badge ── */
+  .badge {
+    display: inline-block; border: 1px solid var(--sky-mid);
+    padding: .35rem .75rem; font-size: .6rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: var(--navy); background: var(--sky);
+    white-space: nowrap;
+  }
+  @media (min-width: 768px) {
+    .badge { font-size: .68rem; letter-spacing: .08em; padding: .35rem .9rem; white-space: normal; }
+  }
+
+  /* ── Norm card ── */
+  .norm-card {
+    border: 1px solid #e2e8f0; border-left: 4px solid var(--navy);
+    padding: 1rem 1.25rem; transition: background .25s;
+  }
+  .norm-card:hover { background: var(--sky); }
+
+  /* ── Quote ── */
+  .quote-block { border-left: 3px solid var(--navy); padding-left: 1.5rem; font-style: italic; color: #4a5568; }
+
+  /* ── Fade-up ── */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity .7s, transform .7s; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── Bounce ── */
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(8px); }
+  }
+  .bounce { animation: bounce 1.8s infinite; }
+
+  /* ── Mobile menu ── */
+  #mobile-menu {
+    display: none; flex-direction: column; gap: 1.5rem;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: #fff; z-index: 60; padding: 2rem;
+    overflow-y: auto;
+  }
+  #mobile-menu.open { display: flex; }
+  #mobile-menu-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1rem; padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  #menu-close-btn {
+    width: 44px; height: 44px; display: flex; align-items: center;
+    justify-content: center; border: 1px solid #e2e8f0; border-radius: 2px;
+    color: #4a5568; font-size: 1.25rem; cursor: pointer;
+    transition: background .2s, color .2s; flex-shrink: 0;
+  }
+  #menu-close-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+  /* ── Presencia location group ── */
+  .loc-group { display: flex; align-items: flex-start; gap: 1.25rem; }
+  .loc-dot {
+    width: 2rem; height: 2rem; border-radius: 50%;
+    border: 2px solid #cbd5e0; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; margin-top: .1rem; transition: all .3s;
+  }
+  .loc-group:hover .loc-dot { background: var(--navy); border-color: var(--navy); }
+  .loc-dot-inner { width: .45rem; height: .45rem; border-radius: 50%; background: #a0aec0; transition: background .3s; }
+  .loc-group:hover .loc-dot-inner { background: #fff; }
+
+  /* ── Contact input ── */
+  .form-input {
+    width: 100%; border: 1px solid #cbd5e0; padding: .75rem 1rem;
+    font-size: .875rem; background: transparent; transition: border-color .25s; outline: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .form-input:focus { border-color: var(--navy); }
+
+  /* ── Section tag icon (brújula) ── */
+  .tag-icon { height: 18px; width: auto; display: inline-block; vertical-align: middle; margin-right: 7px; opacity: .7; }
+  .tag-icon-dark { height: 18px; width: auto; display: inline-block; vertical-align: middle; margin-right: 7px; opacity: .6; filter: brightness(0) invert(1); }
+
+  /* ── País cards ── */
+  .pais-card {
+    padding: 1.25rem;
+    border: 1px solid rgba(42,82,152,.3);
+    background: rgba(30,61,115,.12);
+    transition: border-color .3s, background .3s, box-shadow .3s;
+  }
+  .pais-card:hover {
+    border-color: rgba(90,138,200,.7);
+    background: rgba(30,61,115,.28);
+    box-shadow: 0 0 18px rgba(90,138,200,.12);
+  }
+
+  /* Logo fixes */
+  .nav-logo { height: 56px; width: auto; max-width: none; display: block; flex-shrink: 0; }
+  @media (min-width: 768px) { .nav-logo { height: 72px; } }
+  @media (min-width: 1024px) { .nav-logo { height: 90px; } }
+  .footer-logo { height: 68px; width: auto; max-width: none; display: block; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+  @media (min-width: 768px) { .footer-logo { height: 80px; } }
+  @media (min-width: 1024px) { .footer-logo { height: 90px; } }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ══════════════════════════════ NAVEGACIÓN ══════════════════════════════ -->
+<nav class="fixed w-full z-50 border-b border-slate-200" style="background:#ffffff;backdrop-filter:blur(10px)">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center flex-shrink-0">
+      <img src="logo-nm-transparente.png" alt="N&M Latam Consulting" class="nav-logo">
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex space-x-8 font-medium uppercase tracking-widest" style="font-size:.75rem;color:#374151">
+      <a href="#nosotros"  class="nav-link">Nosotros</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#estandares" class="nav-link">Estándares</a>
+      <a href="#presencia" class="nav-link">Presencia</a>
+      <a href="#contacto"  class="nav-link">Contacto</a>
+    </div>
+
+    <!-- CTA + hamburger -->
+    <div class="flex items-center gap-6">
+      <a href="https://wa.me/5491125812181" target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 font-bold uppercase tracking-widest border-b-2 pb-0.5 transition hover:opacity-70"
+         style="font-size:.72rem;border-color:#25D366;color:#1a3461">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menú">
+        <span class="block w-6 h-0.5 bg-slate-700"></span>
+        <span class="block w-6 h-0.5 bg-slate-700"></span>
+        <span class="block w-4 h-0.5 bg-slate-700"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <div id="mobile-menu-header">
+    <a href="#inicio" class="mobile-link flex-shrink-0">
+      <img src="logo-nm-transparente.png" alt="N&M Latam Consulting" style="height:52px;width:auto">
+    </a>
+    <button id="menu-close-btn" aria-label="Cerrar menú">✕</button>
+  </div>
+  <a href="#nosotros"   class="text-2xl font-light text-slate-700 hover:text-slate-900 transition mobile-link">Nosotros</a>
+  <a href="#servicios"  class="text-2xl font-light text-slate-700 hover:text-slate-900 transition mobile-link">Servicios</a>
+  <a href="#estandares" class="text-2xl font-light text-slate-700 hover:text-slate-900 transition mobile-link">Estándares</a>
+  <a href="#presencia"  class="text-2xl font-light text-slate-700 hover:text-slate-900 transition mobile-link">Presencia</a>
+  <a href="#contacto"   class="text-2xl font-light text-slate-700 hover:text-slate-900 transition mobile-link">Contacto</a>
+  <a href="https://wa.me/5491125812181" target="_blank" class="mt-4 btn-navy text-center">WhatsApp ↗</a>
+</div>
+
+
+<!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+<section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center text-center text-white hero-bg overflow-hidden py-28 md:py-0">
+
+  <!-- Subtle grid overlay -->
+  <div class="absolute inset-0 opacity-[.04]"
+       style="background-image: linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:60px 60px"></div>
+
+  <div class="relative max-w-4xl px-6 z-10">
+    <p class="text-sm sm:text-base uppercase tracking-[.4em] mb-4 italic" style="color:rgba(180,200,230,.8)">North &amp; Milestone</p>
+
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-normal leading-tight mb-5">
+      Visión estratégica.<br>
+      <span class="italic font-light">Logros concretos.</span>
+    </h1>
+
+    <p class="text-sm sm:text-base md:text-lg font-light mb-8 max-w-2xl mx-auto leading-relaxed px-2" style="color:rgba(180,200,230,.9)">
+      Acompañamiento estratégico y técnico adaptado a las altas exigencias del sector salud y farmacéutico en Latinoamérica.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#servicios" class="btn-navy">Nuestros Servicios</a>
+      <a href="#contacto" class="btn-outline-white">Contáctanos</a>
+    </div>
+
+    <!-- Tagline institucional -->
+    <div class="mt-10 max-w-2xl mx-auto">
+      <p class="text-sm sm:text-base leading-relaxed px-2" style="color:rgba(160,186,210,.8)">
+        Respaldados por una trayectoria de más de 25 años en el sector salud, fundamos esta consultora para transformar la gestión médica.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 bounce opacity-50">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ NOSOTROS ══════════════════════════════ -->
+<section id="nosotros" class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Intro -->
+    <div class="grid md:grid-cols-2 gap-16 items-stretch mb-20 fade-up">
+      <div>
+        <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#8a9bbf"><img src="logonm1.svg" class="tag-icon">Nuestra Esencia</span>
+        <div class="divider"></div>
+        <h2 class="text-2xl sm:text-3xl md:text-5xl mb-6 leading-tight">Nuestra consultora nace de la unión de profesionales con más de 25 años de experiencia en el ámbito de la salud.</h2>
+        <p class="text-slate-600 leading-relaxed mb-5">
+          En N&amp;M Consulting ayudamos a nuestros clientes a definir su rumbo y alcanzar sus metas mediante un acompañamiento estratégico y técnico, adaptado a las exigencias del sector salud. Combinamos una visión clara del destino con la planificación de hitos clave que aseguren avances sostenibles, eficientes y alineados con los valores y objetivos del negocio.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          Impulsamos la evolución de cada organización desde sus capacidades actuales, optimizando procesos, promoviendo el cumplimiento normativo y construyendo relaciones de largo plazo basadas en la confianza y el valor compartido.
+        </p>
+        <div class="quote-block">
+          "Optimizamos procesos y promovemos el cumplimiento normativo para construir relaciones de largo plazo basadas en la confianza."
+        </div>
+      </div>
+
+      <!-- Visual right col -->
+      <div class="flex flex-col gap-4 h-full">
+        <div class="overflow-hidden bg-slate-100 flex-1" style="min-height:220px">
+          <img src="https://images.unsplash.com/photo-1573496130407-57329f01f769?auto=format&fit=crop&q=80&w=800"
+               alt="Consultoría estratégica" loading="lazy"
+               class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+        </div>
+        <div class="overflow-hidden bg-slate-100 shrink-0" style="height:220px">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800"
+               alt="Equipo profesional" loading="lazy"
+               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition duration-700">
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo -->
+    <div class="fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#8a9bbf"><img src="logonm1.svg" class="tag-icon">Nuestro Equipo</span>
+      <div class="divider"></div>
+      <p class="text-slate-600 leading-relaxed max-w-3xl mb-10">
+        Contamos con un equipo de profesionales con amplia trayectoria en la industria de la salud, con posiciones de liderazgo en compañías líderes del sector farmacéutico y científico. Esta diversidad de experiencias nos permite comprender de primera mano los desafíos del sector, abordando cada proyecto desde múltiples perspectivas y ofreciendo soluciones realistas, eficaces y alineadas con los más altos estándares de calidad.
+      </p>
+      <p class="text-xs uppercase tracking-widest mb-5 font-semibold" style="color:#8a9bbf">Empresas donde se desempeñaron nuestros consultores</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge">Roche</span>
+        <span class="badge">Johnson &amp; Johnson</span>
+        <span class="badge">Mundipharma</span>
+        <span class="badge">Telefónica</span>
+        <span class="badge">OCASA</span>
+        <span class="badge">Linde</span>
+        <span class="badge">Organismo Argentino de Acreditación</span>
+        <span class="badge">Instituto Nacional de Tecnología Industrial</span>
+        <a href="https://www.valgroupco.com/" target="_blank" rel="noopener" class="badge" style="text-decoration:none">Valgroup</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ MISIÓN Y VISIÓN ══════════════════════════════ -->
+<section class="section-padding text-white" style="background:var(--navy-dark)">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+
+    <div class="fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#5a7aaa"><img src="logonm1.svg" class="tag-icon-dark">Misión</span>
+      <div class="divider-white"></div>
+      <h2 class="text-3xl mb-5 font-normal">Nuestra Misión</h2>
+      <p class="leading-relaxed" style="color:#8faac8">
+        Brindar soluciones integrales para la industria de la salud, abarcando consultoría técnica, regulatoria, estratégica y operativa. Acompañamos a nuestros clientes en el diseño, implementación y mejora de sistemas que garanticen el cumplimiento normativo, la eficiencia organizacional y la optimización de procesos. Trabajamos con responsabilidad, ética y un enfoque personalizado, contribuyendo al desarrollo de organizaciones sostenibles, innovadoras y centradas en la calidad y la seguridad.
+      </p>
+    </div>
+
+    <div class="fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#5a7aaa"><img src="logonm1.svg" class="tag-icon-dark">Visión</span>
+      <div class="divider-white"></div>
+      <h2 class="text-3xl mb-5 font-normal">Nuestra Visión</h2>
+      <p class="leading-relaxed" style="color:#8faac8">
+        Ser una consultora de referencia en Latinoamérica en el desarrollo de estrategias, procesos y sistemas que fortalezcan a las organizaciones del sector salud. Aspiramos a liderar con excelencia técnica y visión integral, generando valor a través de la mejora continua, la innovación y la optimización de procesos en toda la cadena de valor. Construimos relaciones sólidas y duraderas, basadas en la confianza, el conocimiento experto y una mirada estratégica orientada al crecimiento sostenible.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ SERVICIOS ══════════════════════════════ -->
+<section id="servicios" class="section-padding" style="background:var(--sky)">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-16 fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#8a9bbf"><img src="logonm1.svg" class="tag-icon">Lo que hacemos</span>
+      <div class="divider"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-5xl mb-4">Áreas de Especialización</h2>
+      <p class="text-slate-500 max-w-xl leading-relaxed">
+        Soluciones integrales para empresas del sector salud que buscan cumplir con regulaciones, mejorar su sistema de calidad y optimizar sus procesos.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 01 -->
+      <div class="service-card fade-up">
+        <div class="card-number">01</div>
+        <h3 class="text-xl mb-3">Market Entry Strategy</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Acompañamos en el diseño e implementación de estrategias de entrada a nuevos segmentos de mercado o geografías, con análisis de riesgos, barreras de entrada y requisitos regulatorios. Respaldados por una trayectoria de más de 25 años en el sector salud, fundamos esta consultora para transformar la gestión médica.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Análisis de mercado y competidores</li>
+          <li>Estrategia de acceso regulatorio</li>
+          <li>Alianzas estratégicas regionales</li>
+          <li>Hoja de ruta comercial clara</li>
+        </ul>
+      </div>
+
+      <!-- 02 -->
+      <div class="service-card fade-up">
+        <div class="card-number">02</div>
+        <h3 class="text-xl mb-3">Asuntos Regulatorios</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Servicio integral en cada etapa del ciclo de vida del producto. Experiencia en farmacéuticos, biotecnológicos, cosméticos y dispositivos médicos, con regulaciones locales (ANMAT) e internacionales (COFEPRIS, ANVISA).
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Registros sanitarios ANMAT · COFEPRIS · ANVISA</li>
+          <li>Gestión en HELENA, BONITA, ARGOS, TAD</li>
+          <li>Dossiers y documentación técnica</li>
+          <li>Monitoreo regulatorio activo</li>
+        </ul>
+      </div>
+
+      <!-- 03 -->
+      <div class="service-card fade-up">
+        <div class="card-number">03</div>
+        <h3 class="text-xl mb-3">Sistema de Gestión de Calidad</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Diseñamos, implementamos y optimizamos SGC adaptados a cada organización, alineados con ISO 9001, GMP e ISO 13485. Desde el diagnóstico hasta la certificación, promovemos sistemas ágiles y funcionales.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Manuales de Calidad y POEs</li>
+          <li>Master Batch Records</li>
+          <li>Formularios y planillas estandarizados</li>
+          <li>CAPA y gestión documental</li>
+        </ul>
+      </div>
+
+      <!-- 04 -->
+      <div class="service-card fade-up">
+        <div class="card-number">04</div>
+        <h3 class="text-xl mb-3">Capacitaciones</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Capacitaciones personalizadas (In House) adaptadas a la realidad de cada organización, combinando teoría, práctica, casos reales y evaluación final (Quiz) para asegurar la comprensión y aplicación efectiva.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>ISO 9001 / ISO 13485 / GMP</li>
+          <li>Gestión de Riesgos y No Conformidades</li>
+          <li>Auditorías internas</li>
+          <li>Preparación para inspecciones regulatorias</li>
+        </ul>
+      </div>
+
+      <!-- 05 -->
+      <div class="service-card fade-up">
+        <div class="card-number">05</div>
+        <h3 class="text-xl mb-3">Auditorías</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Acompañamos a tu organización para afrontar exitosamente auditorías internas, de clientes e inspecciones de los principales entes regulatorios de la región. Nuestros consultores cuentan con certificaciones internacionales.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Gap analysis y diagnóstico</li>
+          <li>Simulacros y planes de acción</li>
+          <li>Auditores certificados IRCA / DGQ</li>
+          <li>ANMAT · COFEPRIS · ANVISA · Ministerio de Salud</li>
+        </ul>
+      </div>
+
+      <!-- 06 -->
+      <div class="service-card fade-up">
+        <div class="card-number">06</div>
+        <h3 class="text-xl mb-3">Diseño de Envases</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Integramos conocimiento regulatorio y diseño para crear artes gráficas de envases primarios y secundarios cumpliendo ISO 15223 e ISO 15378, sin sacrificar la identidad de marca.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Medicamentos (Rx y OTC)</li>
+          <li>Dispositivos médicos y cosméticos</li>
+          <li>Leyendas obligatorias y simbología</li>
+          <li>Soporte documental para auditorías</li>
+        </ul>
+      </div>
+
+      <!-- 07 -->
+      <div class="service-card fade-up">
+        <div class="card-number">07</div>
+        <h3 class="text-xl mb-3">Continuidad del Negocio (BCP)</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Plan de Continuidad del Negocio para el sector salud. Minimiza el impacto de interrupciones operativas (desastres naturales, fallas tecnológicas, emergencias sanitarias) y cumple con estándares internacionales de gestión de riesgos.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Identificación y análisis de riesgos</li>
+          <li>Estrategias de recuperación</li>
+          <li>Protocolos de comunicación interna y externa</li>
+          <li>Simulacros y mejora continua</li>
+        </ul>
+      </div>
+
+      <!-- 08 -->
+      <div class="service-card fade-up">
+        <div class="card-number">08</div>
+        <h3 class="text-xl mb-3">Optimización y Rediseño de Procesos</h3>
+        <p class="text-sm text-slate-500 mb-5 leading-relaxed">
+          Hacemos más eficiente a la organización mejorando su desempeño operativo. Diseñamos lay out en depósitos y laboratorios, y optimizamos la cadena de supply chain desde la gestión tradicional hasta su modernización.
+        </p>
+        <ul class="text-xs uppercase tracking-tight text-slate-400 space-y-2">
+          <li style="color:var(--navy-light)">→</li>
+          <li>Rediseño de flujos operativos</li>
+          <li>Diseño de lay out (depósitos / laboratorios)</li>
+          <li>Mejora de supply chain</li>
+          <li>Cultura de mejora continua</li>
+        </ul>
+      </div>
+
+      <!-- Logo card -->
+      <div class="service-card fade-up flex flex-col items-center justify-center text-center" style="background:var(--navy-dark);border-top-color:var(--navy-light);border-color:var(--navy-mid);min-height:320px">
+        <img src="logo-nm-transparente.png" alt="N&M Latam Consulting"
+             style="height:110px;width:auto;filter:brightness(0) invert(1);margin-bottom:2rem">
+        <p class="uppercase tracking-widest mb-4" style="color:#8faac8;font-size:.75rem;letter-spacing:.18em">North &amp; Milestone</p>
+        <div style="width:40px;height:1px;background:rgba(255,255,255,.2);margin:0 auto 1.2rem"></div>
+        <p class="font-light leading-relaxed" style="color:#6a8aaa;font-size:.95rem">
+          Visión estratégica.<br>
+          <em style="color:#8faac8">Logros concretos.</em>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ ESTÁNDARES ══════════════════════════════ -->
+<section id="estandares" class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-14 fade-up text-center max-w-2xl mx-auto">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#8a9bbf"><img src="logonm1.svg" class="tag-icon">Marco Normativo</span>
+      <div class="divider mx-auto"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl mb-4">Estándares con los que trabajamos</h2>
+      <p class="text-slate-500 leading-relaxed">
+        Trabajamos con los estándares más exigentes del sector, garantizando que cada proyecto esté alineado con las normativas nacionales e internacionales vigentes.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Normas internacionales -->
+      <div class="fade-up">
+        <p class="text-xs uppercase tracking-widest mb-5 font-semibold" style="color:#8a9bbf">Normas Internacionales</p>
+        <div class="space-y-3">
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">ISO 9001</p>
+            <p class="text-xs text-slate-500">Sistemas de Gestión de Calidad aplicables a cualquier organización.</p>
+          </div>
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">ISO 13485</p>
+            <p class="text-xs text-slate-500">Gestión de calidad específica para dispositivos médicos.</p>
+          </div>
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">ISO 14001</p>
+            <p class="text-xs text-slate-500">Sistema de Gestión Ambiental.</p>
+          </div>
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">GMP · GLP · BPM · ICH Q10</p>
+            <p class="text-xs text-slate-500">Buenas Prácticas en manufactura, laboratorio y gestión farmacéutica.</p>
+          </div>
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">ISO 15223 · ISO 15378</p>
+            <p class="text-xs text-slate-500">Simbología y envases para dispositivos médicos y productos farmacéuticos.</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 italic mt-4 pl-1">Entre otras normativas internacionales aplicables al sector.</p>
+      </div>
+
+      <!-- Organismos regulatorios -->
+      <div class="fade-up">
+        <p class="text-xs uppercase tracking-widest mb-5 font-semibold" style="color:#8a9bbf">Organismos Regulatorios</p>
+        <div class="norm-card mb-6" style="border-left-color:var(--navy-light)">
+          <p class="text-xs text-slate-500">
+            Siguiendo los requisitos regulatorios de organismos como
+            <strong>ANMAT · COFEPRIS · ANVISA · INVIMA</strong>, entre otros,
+            garantizamos que cada proyecto cumpla con las exigencias de los principales entes reguladores de la región.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">DGQ — Asociación Alemana para la Calidad</p>
+            <p class="text-xs text-slate-500">Certificación Qualitätsmanager ISO 9001 por el organismo alemán de referencia en calidad.</p>
+          </div>
+          <div class="norm-card">
+            <p class="text-sm font-semibold mb-1">IRCA — International Register of Certificated Auditors</p>
+            <p class="text-xs text-slate-500">Auditores de Sistemas de Gestión de Calidad certificados internacionalmente.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ PRESENCIA ══════════════════════════════ -->
+<section id="presencia" class="section-padding" style="background:var(--navy-dark)">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-14 fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#5a7aaa"><img src="logonm1.svg" class="tag-icon-dark">Cobertura Regional</span>
+      <div class="divider-white"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-white mb-4">Nuestra Presencia en Latam</h2>
+      <p class="leading-relaxed max-w-xl" style="color:#8faac8">
+        Estamos presentes en los principales mercados de salud de Latinoamérica, ofreciendo acompañamiento local con estándares internacionales.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- México -->
+      <div class="fade-up pais-card flex items-center gap-5">
+        <img src="angel independencia.svg" alt="Ángel de la Independencia" style="height:70px;width:auto;filter:brightness(0) invert(1);opacity:.45;flex-shrink:0">
+        <div>
+          <h3 class="text-white text-base font-semibold mb-0.5">México</h3>
+          <p style="color:#8faac8" class="text-sm">Ciudad de México</p>
+        </div>
+      </div>
+
+      <!-- Brasil -->
+      <div class="fade-up pais-card flex items-center gap-5">
+        <img src="Edificio Copan.svg" alt="Edificio Copan" style="height:70px;width:auto;filter:brightness(0) invert(1);opacity:.45;flex-shrink:0">
+        <div>
+          <h3 class="text-white text-base font-semibold mb-0.5">Brasil</h3>
+          <p style="color:#8faac8" class="text-sm">São Paulo</p>
+        </div>
+      </div>
+
+      <!-- Argentina -->
+      <div class="fade-up pais-card flex items-center gap-5">
+        <img src="obelisco.svg" alt="Obelisco Buenos Aires" style="height:70px;width:auto;filter:brightness(0) invert(1);opacity:.45;flex-shrink:0">
+        <div>
+          <h3 class="text-white text-base font-semibold mb-0.5">Argentina</h3>
+          <p style="color:#8faac8" class="text-sm">Buenos Aires</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ CONTACTO ══════════════════════════════ -->
+<section id="contacto" class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- Left: título -->
+    <div class="fade-up">
+      <span class="text-xs uppercase tracking-widest mb-3 block italic" style="color:#8a9bbf"><img src="logonm1.svg" class="tag-icon">Hablemos</span>
+      <div class="divider"></div>
+      <h2 class="text-2xl sm:text-3xl md:text-5xl mb-6 italic leading-tight">Hablemos de su<br>próximo hito.</h2>
+      <p class="text-slate-500 leading-relaxed mb-8">
+        Contáctenos por el canal que prefiera. Respondemos a la brevedad para coordinar una reunión estratégica sin cargo.
+      </p>
+      <p class="text-xs text-slate-400 uppercase tracking-widest">Presencia<br>México, Ciudad de México<br>Brasil, São Paulo<br>Argentina, Buenos Aires</p>
+    </div>
+
+    <!-- Right: botones de contacto -->
+    <div class="fade-up flex flex-col gap-4">
+
+      <a href="mailto:info@nmlatam.com"
+         class="flex items-center gap-5 p-5 border-2 transition group"
+         style="border-color:var(--navy);background:var(--sky)">
+        <svg class="shrink-0 transition" width="24" height="24" fill="none" stroke="var(--navy)" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+        </svg>
+        <div>
+          <p class="text-xs uppercase tracking-widest mb-0.5 font-semibold" style="color:var(--navy)">Escribinos por Email</p>
+          <p class="text-base font-semibold" style="color:var(--navy)">info@nmlatam.com</p>
+        </div>
+        <span class="ml-auto text-lg" style="color:var(--navy)">↗</span>
+      </a>
+
+      <a href="https://wa.me/5491125812181" target="_blank" rel="noopener"
+         class="flex items-center gap-5 p-5 border-2 transition group"
+         style="border-color:#25D366;background:#f0fdf4">
+        <svg class="shrink-0" width="24" height="24" fill="#25D366" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <div>
+          <p class="text-xs uppercase tracking-widest mb-0.5 font-semibold" style="color:#16a34a">Escribinos por WhatsApp</p>
+          <p class="text-base font-semibold" style="color:#16a34a">+54 9 11 2581-2181</p>
+        </div>
+        <span class="ml-auto text-lg" style="color:#25D366">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer class="text-white pt-14 pb-8" style="background:#0d1f3c">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-10 pb-10 border-b items-start" style="border-color:rgba(255,255,255,0.08)">
+
+      <!-- Brand — ocupa 2 columnas -->
+      <div class="col-span-2 md:col-span-2">
+        <img src="logo-nm-transparente.png" alt="N&M Latam Consulting" class="footer-logo">
+        <p class="mt-4 leading-relaxed max-w-xs" style="color:#7a96bc;font-size:.82rem">
+          Consultoría estratégica, técnica y regulatoria para el sector salud y farmacéutico en Latinoamérica.
+        </p>
+      </div>
+
+      <!-- Navegación -->
+      <div>
+        <p class="uppercase tracking-widest mb-5 font-semibold" style="color:#ffffff;font-size:.68rem;letter-spacing:.12em">Navegación</p>
+        <ul style="color:#7a96bc;font-size:.82rem;line-height:1">
+          <li class="mb-3"><a href="#nosotros"   class="hover:text-white transition">Nosotros</a></li>
+          <li class="mb-3"><a href="#servicios"  class="hover:text-white transition">Servicios</a></li>
+          <li class="mb-3"><a href="#estandares" class="hover:text-white transition">Estándares</a></li>
+          <li class="mb-3"><a href="#presencia"  class="hover:text-white transition">Presencia</a></li>
+          <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <p class="uppercase tracking-widest mb-5 font-semibold" style="color:#ffffff;font-size:.68rem;letter-spacing:.12em">Contacto</p>
+        <ul style="color:#7a96bc;font-size:.82rem;line-height:1">
+          <li class="mb-3"><a href="mailto:info@nmlatam.com" class="hover:text-white transition">info@nmlatam.com</a></li>
+          <li class="mb-5"><a href="https://wa.me/5491125812181" class="hover:text-white transition">+54 9 11 2581-2181</a></li>
+          <li class="mb-1" style="color:#4e6a8a;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em">Presencia</li>
+          <li style="color:#5e7a96;font-size:.78rem;line-height:1.6">Ciudad de México<br>São Paulo<br>Buenos Aires</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center" style="color:#3e5470;font-size:.7rem">
+      &copy; <span id="year"></span> N&amp;M Latam Consulting. Todos los derechos reservados.
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════ JAVASCRIPT ══════════════════════════════ -->
+<script>
+  // Año dinámico
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const menuBtn    = document.getElementById('menu-btn');
+  const menuClose  = document.getElementById('menu-close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function openMenu()  { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+
+  menuBtn.addEventListener('click',  () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
+  menuClose.addEventListener('click', closeMenu);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Stagger cards
+  document.querySelectorAll('.service-card.fade-up').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.07}s`;
+  });
+
+  // Nav active on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks  = document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 130) current = s.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
